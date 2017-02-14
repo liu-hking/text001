@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    	body{
+    		margin: 0;
+    	}
+    	h3{
+    		margin: 0;
+    	}
+      .section:nth-child(1) {
+        background-color: skyblue;
+      }
+      
+      .section:nth-child(2) {
+        background-color: yellow;
+      }
+      
+      .section:nth-child(3) {
+        background-color: yellowgreen;
+      }
+      
+      .section:nth-child(4) {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+
+  <body>
+  	<!-- 每一个区域的 容器 必须 设置 class 为 section -->
+    <div id="dowebok">
+      <div class="section">
+        <h3>第一屏</h3>
+      </div>
+      <div class="section">
+        <h3>第二屏</h3>
+      </div>
+      <div class="section">
+        <h3>第三屏</h3>
+      </div>
+      <div class="section">
+        <h3>第四屏</h3>
+      </div>
+    </div>
+  </body>
+
+</html>
+<!-- 导入jq -->
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.fullPage.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  // 入口函数
+  $(function() {
+    // 找到 容器元素 调用 fullPage方法
+    $('#dowebok').fullpage({
+    	// 加载完毕的回调事件 传递给我们的参数
+    	// index 是从1 开始 
+    	afterLoad:function(anchorLink,index){
+    		console.log(anchorLink+'||'+index);
+    		
+    		// 当 当前 显示的 页面 颜色 变为 pink 
+    		// jq中如果使用 eq方法 index 是从 0开始
+    		$('.section').eq(index-1).css({
+    			backgroundColor:'hotpink'
+    		})
+    	}
+    });
+  });
+</script>

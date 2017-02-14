@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+}
+
+
+/*  区域1 */
+
+.first {
+  background-color: deepskyblue;
+  padding-top: 100px;
+}
+
+
+/*  */
+
+.first .logo {
+  background: url(../images/logo.png) no-repeat;
+  width: 251px;
+  height: 186px;
+  margin: 0 auto;
+}
+
+.first .text {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.first .info {
+  background: url(../images/info_1.png);
+  width: 772px;
+  height: 49px;
+  margin: 0 auto;
+}
+
+
+/* 区域2 */
+
+
+/* 我们使用了 fullpage插件之后
+ * 他会 自动帮助我们 在 每一个区域的 内部 添加一个 div
+ * 把原本的 页面元素 放到这个div中
+ *  */
+
+.second {
+  background-color: yellowgreen;
+}
+
+
+/* 区域2 */
+
+
+/* 我们使用了 fullpage插件之后
+ * 他会 自动帮助我们 在 每一个区域的 内部 添加一个 div
+ * 把原本的 页面元素 放到这个div中
+ *  */
+
+.second > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.second .shield {
+  width: 500px;
+}
+
+.second .info {
+  background: url(../images/info_2.png) no-repeat;
+  width: 635px;
+  height: 309px;
+}
+
+/* 区域3 */
+.third {
+  background-color: orange;
+}
+
+.third>div{
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: space-around;
+}
+
+.third .info{
+	background: url(../images/info_3.png);
+	width: 631px;
+	height: 278px;
+}
+.third .rocket{
+	background: url(../images/rocket.png);
+	width: 203px;
+	height: 204px;
+	position: absolute;
+	right: 180px;
+	top:250px;
+}
+.third .circle{
+	background: url(../images/circle.png);
+	width: 453px;
+	height: 449px;
+}
+
+.fourth {
+  background-color: forestgreen;
+}
+
+.fifth {
+  background-color: skyblue;
+}
